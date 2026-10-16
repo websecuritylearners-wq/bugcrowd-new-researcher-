@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bugcrowd researcher and aspiring web security learner." />
+  <title>Security Researcher | Profile</title>
+  <style>
+    :root {
+      --bg: #080d18;
+      --panel: rgba(16, 25, 43, 0.82);
+      --text: #eef4ff;
+      --muted: #a7b4ca;
+      --accent: #7cf7c5;
+      --accent2: #7aa8ff;
+      --border: rgba(164, 190, 230, 0.17);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 28px 16px;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(66, 110, 220, .18), transparent 32%),
+        radial-gradient(circle at 85% 80%, rgba(48, 220, 164, .12), transparent 30%),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .card {
+      width: min(760px, 100%);
+      padding: clamp(28px, 6vw, 54px);
+      position: relative;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .35);
+      backdrop-filter: blur(14px);
+      animation: rise .7s ease both;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      top: -150px;
+      right: -90px;
+      border-radius: 50%;
+      background: var(--accent);
+      filter: blur(90px);
+      opacity: .16;
+      pointer-events: none;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      color: var(--accent);
+      border: 1px solid rgba(124, 247, 197, .25);
+      background: rgba(124, 247, 197, .07);
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    h1 {
+      margin-top: 26px;
+      font-size: clamp(2.3rem, 7vw, 4.5rem);
+      line-height: 1.04;
+      letter-spacing: -.055em;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--accent);
+    }
+
+    .intro {
+      max-width: 570px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.4vw, 1.12rem);
+      line-height: 1.8;
+    }
+
+    .divider {
+      height: 1px;
+      margin: 32px 0;
+      background: var(--border);
+    }
+
+    .section-label {
+      margin-bottom: 16px;
+      color: #d9e5fa;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 10px 14px;
+      color: #dce8fb;
+      background: rgba(122, 168, 255, .08);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: .9rem;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .tag:hover {
+      transform: translateY(-3px);
+      border-color: rgba(124, 247, 197, .55);
+    }
+
+    .quote {
+      margin-top: 30px;
+      padding-left: 16px;
+      border-left: 2px solid var(--accent);
+      color: #c2cee2;
+      font-size: .96rem;
+      line-height: 1.7;
+    }
+
+    footer {
+      margin-top: 36px;
+      color: #8291aa;
+      font-size: .82rem;
+      text-align: center;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="status"><span class="dot"></span> Learning • Researching • Improving</div>
+
+    <h1>Hello, I'm a <span>Security Researcher.</span></h1>
+
+    <p class="intro">
+      I am a Bugcrowd researcher and a new web security learner.
+      I’m exploring web application security, learning how vulnerabilities work,
+      and improving my skills through continuous practice and responsible research.
+    </p>
+
+    <div class="divider"></div>
+
+    <h2 class="section-label">My Focus</h2>
+    <div class="interests">
+      <span class="tag">Bugcrowd Research</span>
+      <span class="tag">Web Security</span>
+      <span class="tag">Learning OWASP</span>
+      <span class="tag">Ethical Hacking</span>
+      <span class="tag">Responsible Disclosure</span>
+    </div>
+
+    <p class="quote">
+      “Stay curious, keep learning, and use security knowledge responsibly.”
+    </p>
+
+    <footer>Built with HTML &amp; CSS · Always learning</footer>
+  </main>
+</body>
+</html>
